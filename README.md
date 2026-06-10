@@ -4,16 +4,18 @@ Tiny Rust CLI for stripping environment variable values before sharing env text 
 
 `slimshady` reads environment text from stdin and replaces every recognized value with `<redacted>`.
 
+[crates.io](https://crates.io/crates/slimshady) · [source](https://github.com/jerkeyray/slimshady)
+
 ## Install
 
 ```sh
-cargo install --path .
+cargo install slimshady
 ```
 
-Or build a local release binary:
+From a local checkout:
 
 ```sh
-cargo build --release
+cargo install --path .
 ```
 
 ## Usage
@@ -63,3 +65,10 @@ Recognized input:
 Only shell-style variable names are printed: `[A-Za-z_][A-Za-z0-9_]*`.
 
 Blank lines, comment-only lines, malformed lines, and invalid variable names are skipped silently. Values are never preserved, hashed, truncated, typed, or length-revealed.
+
+## Development
+
+```sh
+cargo test
+cargo build --release
+```

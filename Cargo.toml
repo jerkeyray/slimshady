@@ -4,5 +4,6 @@ version = "0.1.0"
 edition = "2024"
 license = "MIT"
 description = "Strip environment variable values for safe LLM sharing."
+repository = "https://github.com/jerkeyray/slimshady"
 
 [dependencies]
